@@ -1,5 +1,3 @@
-以下は「minulog」プロジェクトのためのREADMEのサンプルです！
-
 📘 minulog
 
 “For personal photography and nature portfolio.”
