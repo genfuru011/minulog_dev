@@ -1,0 +1,68 @@
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 環境設定ファイル
+.env
+.env.*.local
+
+# ビルド成果物
+dist/
+build/
+out/
+*.cache/
+
+# IDE/エディタ固有のファイル
+.vscode/
+.idea/
+*.swp
+
+# 静的サイトジェネレータやフレームワーク用（必要に応じてカスタマイズ）
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+
+# Gitにコミットしない動的生成ファイル
+*.lock
+*.bak
+*.tmp
+
+# アセット関連（例: Webpack/Bundler）
+*.bundle.js
+*.min.js
+*.map
+
+# テスト関連
+coverage/
+*.lcov
+
+# 画像やメディアの加工後ファイル（必要に応じて追加）
+*.tmp.*
+
+# 忘れやすいその他の不要なファイル
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# 特定のフォルダをコミットしない場合
+/public/uploads/
+
+# 特定のファイルを含めたくない場合
+!public/
