@@ -1,0 +1,89 @@
+/* --- 基本スタイル --- */
+body {
+    font-family: proxima-nova, sans-serif; /* フォント設定 */
+    max-width: 1200px; /* ページ幅を制限 */
+    margin: 0 auto; /* ページを中央に配置 */
+    padding: 0 20px; /* 左右に余白 */
+    background-color: #fff; /* 背景色 */
+    text-align: center; /* テキストを中央揃え */
+    color: #000000; /* テキストカラー */
+}
+
+/* --- ヘッダー --- */
+.site-header {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* ロゴとリンクを左右に配置 */
+    align-items: center; /* 縦方向を中央揃え */
+    padding: 10px 20px;
+    border-bottom: 3px solid #666; /* ボーダー */
+    margin: 0 auto; /* ヘッダーを中央揃え */
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.4rem; /* ロゴのサイズ */
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* --- ナビゲーション --- */
+.site-nav .nav-list {
+    list-style: none; /* バレットを消す */
+    display: flex; /* 横並びに配置 */
+    gap: 30px; /* リンク間のスペース */
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1rem; /* リンクのフォントサイズ */
+}
+
+.nav-link {
+    text-decoration: none; /* 下線を消す */
+    font-weight: bold; /* 太字 */
+    color: #000000; /* リンクの色 */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8d80ff; /* ホバー時の色 */
+}
+
+/* --- メインセクション --- */
+.main-content .intro-section {
+    text-align: center; /* 中央揃え */
+    padding: 20px 0; /* セクションの上下余白 */
+}
+
+.intro-image {
+    max-width: 100%; /* 画像を幅に収める */
+    height: auto; /* アスペクト比を維持 */
+    margin-bottom: 0px; /* 画像下の余白 */
+}
+
+.intro-title {
+    margin-top: 150px; /* 見出し上の余白 */
+    margin-bottom: 50px; /* 見出し下の余白 */
+}
+
+.intro-description {
+    margin-top: 10px;
+    margin-bottom: 170px;
+    line-height: 1.6; /* 行間を広げる */
+    color: #a2a2a2; /* テキストカラー */
+}
+
+.image-caption {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    line-height: 1.6; /* 行間を広げる */
+    color: #a2a2a2; /* テキストカラー */
+}
+
+/* --- フッター --- */
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* フッター背景色 */
+    color: #fff; /* フッターテキスト色 */
+}
