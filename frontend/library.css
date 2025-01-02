@@ -1,0 +1,236 @@
+/* --- 全体スタイル --- */
+body {
+  font-family: proxima-nova, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #000000;
+  animation: fadeIn 1s ease-in-out; /* ページ全体のフェードイン */
+}
+
+/* --- フェードインアニメーション --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* 下からスライドイン */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- ヘッダー --- */
+.site-header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* --- ナビゲーション --- */
+.site-nav .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #898989;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #8d80ff;
+}
+
+/* --- メインセクション --- */
+.photo-library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.photo-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.photo-item img {
+  width: 61.2%;
+  height: auto;
+  display: block;
+  border-radius: 8px 0 0 8px;
+}
+
+.photo-item:hover {
+  transform: scale(1.05); /* 拡大効果 */
+  background-color: #444;
+}
+
+.photo-item:hover img {
+  filter: brightness(0.7);
+}
+
+.photo-item:hover .photo-caption h3,
+.photo-item:hover .photo-caption p {
+  color: #fff;
+}
+
+.photo-caption {
+  width: 38.2%;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.photo-caption h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+.photo-caption p {
+  margin: 0;
+  font-size: 10px;
+  color: #777;
+}
+
+/* --- ポップアップ全体 --- */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.popup-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease-in-out; /* ポップアップのフェードイン */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+/* --- ポップアップの左右配置 --- */
+.popup-container {
+  display: flex;
+  gap: 20px;
+}
+
+.popup-image {
+  flex: 1;
+  text-align: center;
+}
+
+.popup-image img {
+  max-width: 95%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-details {
+  flex: 2;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
+
+.photo-details h2 {
+  margin-top: 0;
+}
+
+.photo-details p {
+  margin: 10px 0;
+}
+
+.photo-details strong {
+  font-weight: bold;
+  color: #000;
+}
+
+/* --- レスポンシブ対応 --- */
+
+/* スマホ（画面幅600px以下） */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: flex; /* ヘッダーを縦並びに */
+    text-align: center;
+  }
+
+  .nav-list {
+    flex-direction: flex; /* ナビゲーションを縦並びに */
+    gap: 5px;
+  }
+
+  .photo-library {
+    grid-template-columns: 1fr; /* 1列表示に */
+  }
+
+  .popup-container {
+    flex-direction: column; /* ポップアップを縦並びに */
+  }
+
+  .popup-content {
+    width: 90%; /* 幅を調整 */
+  }
+}
+
+/* タブレット（画面幅600px～1024px） */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .photo-library {
+    grid-template-columns: repeat(2, 1fr); /* 2列表示に */
+  }
+
+  .popup-content {
+    width: 85%; /* 幅を調整 */
+  }
+}
+
+/* デスクトップ（画面幅1024px以上） */
+@media (min-width: 1025px) {
+  .photo-library {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 自動調整 */
+  }
+}

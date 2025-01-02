@@ -1,0 +1,169 @@
+/* --- 基本スタイル（変更なし） --- */
+body {
+    font-family: proxima-nova;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #000000;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- ヘッダー --- */
+.site-header {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.site-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.nav-link {
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #898989;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #8d80ff;
+}
+
+/* --- メインセクション --- */
+.main-content .intro-section {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.intro-title {
+    font-size: 3.5rem;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.intro-description {
+    margin-top: 10px;
+    margin-bottom: 170px;
+    line-height: 1.6;
+    color: #a2a2a2;
+}
+
+.image-caption {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #a2a2a2;
+}
+
+/* --- フッター --- */
+.site-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #cacaca;
+}
+
+/* --- レスポンシブ対応 --- */
+
+/* --- スマホ（600px以下） --- */
+@media (max-width: 600px) {
+    body {
+        padding: 0 10px; /* 左右の余白を小さく */
+    }
+
+    .site-header {
+        text-align: center;
+    }
+
+    .site-title {
+        font-size: 1.2rem; /* タイトルを小さく */
+    }
+
+    .nav-list {
+        flex-direction: flex ; /* ナビゲーションを縦並びに */
+        gap: 5px;
+    }
+
+    .intro-title {
+        font-size: 2.5rem; /* 見出しを小さく */
+        margin-top: 100px;
+        margin-bottom: 30px;
+    }
+
+    .intro-description {
+        margin-bottom: 100px; /* 下余白を調整 */
+    }
+
+    .image-caption {
+        font-size: 1rem; /* キャプションを小さく */
+    }
+}
+
+/* --- タブレット（600px～1024px） --- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .site-header {
+        padding: 30px 15px;
+    }
+
+    .nav-list {
+        gap: 15px;
+    }
+
+    .intro-title {
+        font-size: 3rem;
+        margin-top: 120px;
+    }
+
+    .intro-description {
+        margin-bottom: 130px;
+    }
+}
+
+/* --- デスクトップ（1024px以上） --- */
+@media (min-width: 1025px) {
+    .site-header {
+        padding: 40px 20px;
+    }
+
+    .nav-list {
+        gap: 20px;
+    }
+
+    .intro-title {
+        font-size: 3.5rem;
+    }
+
+    .intro-description {
+        margin-bottom: 170px;
+    }
+}
